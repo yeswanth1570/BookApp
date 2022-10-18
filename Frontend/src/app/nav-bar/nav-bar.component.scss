@@ -1,0 +1,14 @@
+mat-toolbar{
+  display: flex;
+  justify-content:space-between;
+}
+.nav {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  // float: right;
+}
+*{
+  text-decoration: none;
+  list-style: none;
+}

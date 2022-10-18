@@ -1,0 +1,34 @@
+<mat-toolbar>
+    <h1>SignUp Page</h1>
+</mat-toolbar>
+<section class="inputFields">
+    <mat-form-field>
+        <div>
+            <mat-label>User Name</mat-label>
+            <input matInput type="text" [(ngModel)]="UserName">
+        </div>
+    
+    </mat-form-field>
+    <mat-form-field>
+        <div>
+            <mat-label>Email</mat-label>
+            <input matInput type="email" [(ngModel)]="email">
+        </div>
+    </mat-form-field>
+    <mat-form-field>
+        <div>
+            <mat-label>Mobile</mat-label>
+            <input matInput type="number" [(ngModel)]="number">
+        </div>
+    </mat-form-field>
+    <mat-form-field>
+        <div>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [(ngModel)]="Password">
+        </div>
+    </mat-form-field>
+    <button (click)="submit()">
+        <span>Click to submit</span>
+    </button>
+</section>
+

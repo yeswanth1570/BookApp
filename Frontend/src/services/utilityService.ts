@@ -1,11 +1,14 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 
 export class utilityService{
 constructor(){
 
 }
+isLoggedIn=false;
 getUserDetails(){
     let userDetails = {
         'msg':'failed',

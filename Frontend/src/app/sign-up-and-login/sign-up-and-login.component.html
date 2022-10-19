@@ -1,34 +1,50 @@
 <mat-toolbar>
     <h1>SignUp Page</h1>
 </mat-toolbar>
-<section class="inputFields">
+<section class="inputFields" *ngIf="type==='signup'">
     <mat-form-field>
-        <div>
-            <mat-label>User Name</mat-label>
-            <input matInput type="text" [(ngModel)]="UserName">
-        </div>
-    
+        <mat-label>User Name</mat-label>
+        <input matInput formControlName="UserName" type="text">
+
     </mat-form-field>
     <mat-form-field>
-        <div>
-            <mat-label>Email</mat-label>
-            <input matInput type="email" [(ngModel)]="email">
-        </div>
+        <mat-label>Email</mat-label>
+        <input matInput  formControlName="email" type="email" >
     </mat-form-field>
     <mat-form-field>
-        <div>
-            <mat-label>Mobile</mat-label>
-            <input matInput type="number" [(ngModel)]="number">
-        </div>
+        <mat-label>Mobile</mat-label>
+        <input matInput  formControlName="mobile" type="number" >
     </mat-form-field>
     <mat-form-field>
-        <div>
-            <mat-label>Password</mat-label>
-            <input matInput type="password" [(ngModel)]="Password">
-        </div>
+
+        <mat-label>Password</mat-label>
+        <input matInput  formControlName="password" type="password">
+
     </mat-form-field>
-    <button (click)="submit()">
+    <button (click)="submit(signUpForm)">
         <span>Click to submit</span>
     </button>
+        
 </section>
+<section class="inputFields"  *ngIf="type==='login'">
+    <form [formGroup]="loginForm" (ngSubmit)="submit(loginForm)">
 
+    </form>
+    <mat-form-field>
+        <mat-label>User Name</mat-label>
+        <input matInput  formControlName="username" type="text">
+
+    </mat-form-field>
+   
+    <mat-form-field>
+
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+
+    </mat-form-field>
+    <button (click)="submit(loginForm)">
+        <span>Click to submit</span>
+    </button>
+        
+</section>
+<mat-label class="loginSignup"><a (click)="type ='login'" ><span>login</span></a>/<a  (click)="type ='signup'" >signup</a></mat-label>

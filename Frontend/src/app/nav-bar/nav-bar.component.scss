@@ -8,6 +8,10 @@ mat-toolbar{
   justify-content: center;
   // float: right;
 }
+ul li {
+  float: left;
+  margin: 5px;
+}
 *{
   text-decoration: none;
   list-style: none;

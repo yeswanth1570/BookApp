@@ -3,7 +3,10 @@
       <h1 class="example-app-name">Menu Group</h1>
       <section  class="nav">
           <ul>
-            <li (click)="decideSignUpOrLogin()">signUp/login</li>
+            <li>Download</li>
+            <li *ngIf="utilService.isLoggedIn">Upload</li>
+            <li *ngIf="!utilService.isLoggedIn" (click)="decideSignUpOrLogin()">signUp/login</li>
+            <li *ngIf="utilService.isLoggedIn" (click)="logout()">Logout</li>
           </ul> 
 
       </section>

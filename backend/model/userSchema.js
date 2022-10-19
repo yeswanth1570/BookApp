@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 let userSchema =new mongoose.Schema({
     username:{
         type:String,
-        required:"Required"
+        required:true
     },
     mobilenumber:{
         type:Number
